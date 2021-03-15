@@ -4,14 +4,14 @@
  [RequireComponent(typeof(BoxCollider))]
 public class DiscRotator : MonoBehaviour
 {
-	[Header("Settings")]
+    [Header("Settings")]
     [SerializeField] private float _discRotationDragThreshold = 0.5f;
-	[SerializeField] private float _discRotationSpeed = 1;
+    [SerializeField] private float _discRotationSpeed = 1;
 
     private RubikCube _rubikCube = null;
     private BoxCollider _cubeBoxCollider = null;
 
-	private Plane _collisionPlaneIncreaser = new Plane();
+    private Plane _collisionPlaneIncreaser = new Plane();
 
     private Vector3 _startDraggingPointInLocalSpace;
     private Vector3 _startDraggingNormalInLocalSpace;
@@ -20,35 +20,35 @@ public class DiscRotator : MonoBehaviour
 
     
     private Camera _camera = null;
-	private bool _isDragging;
+    private bool _isDragging;
 
     private void Awake()
     {
-		_rubikCube = GetComponent<RubikCube>();
+        _rubikCube = GetComponent<RubikCube>();
         _cubeBoxCollider = GetComponent<BoxCollider>();
-		_camera = Camera.main;
+        _camera = Camera.main;
 
-		_isDragging = false;
-	}
+        _isDragging = false;
+    }
 
-	private void Update()
+    private void Update()
     {
         if (!GameManager.Instance.gameplayInputAllowed) //added
             return;
 
         Vector3 raycastPosition = Input.mousePosition;
-		bool wantToStartDragRotate = Input.GetMouseButtonDown(0);
+        bool wantToStartDragRotate = Input.GetMouseButtonDown(0);
 
-		if (!_isDragging && !_rubikCube.IsDiscRotating && wantToStartDragRotate)
+        if (!_isDragging && !_rubikCube.IsDiscRotating && wantToStartDragRotate)
         {
             CheckDiscDragStartAndChangeState(raycastPosition);
             return;
         }
 
-		if (_isDragging)
-		{
-			DoDiscDragInProgress(raycastPosition);
-		}
+        if (_isDragging)
+        {
+            DoDiscDragInProgress(raycastPosition);
+        }
     }
 
     private void CheckDiscDragStartAndChangeState(Vector3 raycastTarget)
@@ -60,7 +60,7 @@ public class DiscRotator : MonoBehaviour
         {
             CalculateDraggedCubeInformation(hit);
 
-			_isDragging = true;
+            _isDragging = true;
         }
     }
 
@@ -128,14 +128,14 @@ public class DiscRotator : MonoBehaviour
             float discIndex = Vector3.Dot(localRotationAxis, _startDraggingPointInLocalSpace);
             discIndex = Mathf.Clamp(discIndex + _rubikCube.CubeSideDimension / 2.0f, 0, _rubikCube.CubeSideDimension - 1);
 
-			Vector3 directionIndicator = Vector3.Cross(_startDraggingNormalInLocalSpace, localRotationAxis);
+            Vector3 directionIndicator = Vector3.Cross(_startDraggingNormalInLocalSpace, localRotationAxis);
             
-			bool isPositiverotation = Vector3.Dot(differenceVector, directionIndicator) < 0;
+            bool isPositiverotation = Vector3.Dot(differenceVector, directionIndicator) < 0;
 
 
             _rubikCube.RotateDisc(localRotationAxis, (int)discIndex, isPositiverotation, _discRotationSpeed);
         }
         
-		_isDragging = false;
+        _isDragging = false;
     }
 }

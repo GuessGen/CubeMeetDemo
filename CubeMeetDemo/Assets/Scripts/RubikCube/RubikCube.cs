@@ -5,8 +5,8 @@ using UnityEngine.Assertions;
 [RequireComponent(typeof(BoxCollider))]
 public class RubikCube : MonoBehaviour
 {
-	public bool IsInitialized { private set; get; }
-	public int CubeSideDimension { private set; get; }
+    public bool IsInitialized { private set; get; }
+    public int CubeSideDimension { private set; get; }
     public bool IsDiscRotating { private set; get; }
 
     public event System.Action OnChanged;
@@ -25,15 +25,15 @@ public class RubikCube : MonoBehaviour
             throw new System.Exception("Initialized cube cannot be initialized again");
         }
 
-		Assert.IsFalse(dimensions < 2, "The dimensions of the cube cannot be smaller than 2");
-		Assert.IsNotNull(cubletPrefab, "The cublet prefab cannot be null");
+        Assert.IsFalse(dimensions < 2, "The dimensions of the cube cannot be smaller than 2");
+        Assert.IsNotNull(cubletPrefab, "The cublet prefab cannot be null");
 
         IsInitialized = true;
         
         _pivotToRotateArround = new GameObject("Pivot").transform;
         _pivotToRotateArround.SetParent(transform, false);
 
-		GenerateCublets(dimensions, cubletPrefab);
+        GenerateCublets(dimensions, cubletPrefab);
 
         _cubletBackingStore = new Transform[CubeSideDimension, CubeSideDimension];
 
@@ -62,17 +62,17 @@ public class RubikCube : MonoBehaviour
                     if (x == 0 || y == 0 || z == 0 || x == _maximumCubletIndex || y == _maximumCubletIndex || z == _maximumCubletIndex)
                     {
                         GameObject cubletGO = Instantiate(cubletPrefab, bottomLeftBack + new Vector3(x, y, z), Quaternion.identity);
-						Transform cubletTransform = cubletGO.transform;
+                        Transform cubletTransform = cubletGO.transform;
                         _cublets[x, y, z] = cubletTransform;
 
-						if (cubletTransform.childCount == 6)
-						{
-							cubletTransform.GetChild(0).gameObject.SetActive(x == 0);
-							cubletTransform.GetChild(1).gameObject.SetActive(x == _maximumCubletIndex);
-							cubletTransform.GetChild(2).gameObject.SetActive(y == 0);
-							cubletTransform.GetChild(3).gameObject.SetActive(y == _maximumCubletIndex);
-							cubletTransform.GetChild(4).gameObject.SetActive(z == 0);
-							cubletTransform.GetChild(5).gameObject.SetActive(z == _maximumCubletIndex);
+                        if (cubletTransform.childCount == 6)
+                        {
+                            cubletTransform.GetChild(0).gameObject.SetActive(x == 0);
+                            cubletTransform.GetChild(1).gameObject.SetActive(x == _maximumCubletIndex);
+                            cubletTransform.GetChild(2).gameObject.SetActive(y == 0);
+                            cubletTransform.GetChild(3).gameObject.SetActive(y == _maximumCubletIndex);
+                            cubletTransform.GetChild(4).gameObject.SetActive(z == 0);
+                            cubletTransform.GetChild(5).gameObject.SetActive(z == _maximumCubletIndex);
                         }
 
                         cubletTransform.SetParent(transform, false);
@@ -91,7 +91,7 @@ public class RubikCube : MonoBehaviour
         StartCoroutine(RotateDiscCoroutine(axis, layer, positiveRotation, rotateSpeed));
     }
 
-	public IEnumerator RotateDiscCoroutine(Vector3 axis, int layer, bool positiveRotation, float rotateSpeed)
+    public IEnumerator RotateDiscCoroutine(Vector3 axis, int layer, bool positiveRotation, float rotateSpeed)
     {
         if (IsDiscRotating) yield break;
         IsDiscRotating = true;
@@ -122,7 +122,7 @@ public class RubikCube : MonoBehaviour
         float centerIndex = _maximumCubletIndex / 2.0f;
         Vector2 center = new Vector2(centerIndex, centerIndex);
 
-		for (int u = 0; u < CubeSideDimension; u++)
+        for (int u = 0; u < CubeSideDimension; u++)
         {
             for (int v = 0; v < CubeSideDimension; v++)
             {
@@ -134,10 +134,10 @@ public class RubikCube : MonoBehaviour
 
                     Vector2 originalUV = new Vector2(u, v);
                     Vector2 translatedUV = originalUV - center;
-				
-					Vector2 rotatedUV = new Vector2(-translatedUV.y, translatedUV.x);
-					
-					if (!positiveRotation) 
+
+                    Vector2 rotatedUV = new Vector2(-translatedUV.y, translatedUV.x);
+
+                    if (!positiveRotation) 
                         rotatedUV *= -1;
                     
                     rotatedUV += center;
