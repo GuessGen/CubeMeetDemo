@@ -1,0 +1,292 @@
+fileFormatVersion: 2
+guid: bb5da5f4a11587248884d423720a38a1
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: 0 X neg RightRed
+  - first:
+      1: 100002
+    second: 1 X pos LeftOrange
+  - first:
+      1: 100004
+    second: 2 Y neg DownYellow
+  - first:
+      1: 100006
+    second: 3 Y pos UpWhite
+  - first:
+      1: 100008
+    second: 4 Z neg BackBlue
+  - first:
+      1: 100010
+    second: 5 Z pos FrontGreen
+  - first:
+      1: 100012
+    second: //RootNode
+  - first:
+      1: 100014
+    second: 0 X neg LeftRed
+  - first:
+      1: 100016
+    second: 1 X pos RightOrange
+  - first:
+      4: 400000
+    second: 0 X neg RightRed
+  - first:
+      4: 400002
+    second: 1 X pos LeftOrange
+  - first:
+      4: 400004
+    second: 2 Y neg DownYellow
+  - first:
+      4: 400006
+    second: 3 Y pos UpWhite
+  - first:
+      4: 400008
+    second: 4 Z neg BackBlue
+  - first:
+      4: 400010
+    second: 5 Z pos FrontGreen
+  - first:
+      4: 400012
+    second: //RootNode
+  - first:
+      4: 400014
+    second: 0 X neg LeftRed
+  - first:
+      4: 400016
+    second: 1 X pos RightOrange
+  - first:
+      21: 2100000
+    second: Black
+  - first:
+      21: 2100002
+    second: LeftOrange
+  - first:
+      21: 2100004
+    second: BackBlue
+  - first:
+      21: 2100006
+    second: UpWhite
+  - first:
+      21: 2100008
+    second: RightRed
+  - first:
+      21: 2100010
+    second: FrontGreen
+  - first:
+      21: 2100012
+    second: DownYellow
+  - first:
+      23: 2300000
+    second: 0 X neg RightRed
+  - first:
+      23: 2300002
+    second: 1 X pos LeftOrange
+  - first:
+      23: 2300004
+    second: 2 Y neg DownYellow
+  - first:
+      23: 2300006
+    second: 3 Y pos UpWhite
+  - first:
+      23: 2300008
+    second: 4 Z neg BackBlue
+  - first:
+      23: 2300010
+    second: 5 Z pos FrontGreen
+  - first:
+      23: 2300012
+    second: //RootNode
+  - first:
+      23: 2300014
+    second: 0 X neg LeftRed
+  - first:
+      23: 2300016
+    second: 1 X pos RightOrange
+  - first:
+      33: 3300000
+    second: 0 X neg RightRed
+  - first:
+      33: 3300002
+    second: 1 X pos LeftOrange
+  - first:
+      33: 3300004
+    second: 2 Y neg DownYellow
+  - first:
+      33: 3300006
+    second: 3 Y pos UpWhite
+  - first:
+      33: 3300008
+    second: 4 Z neg BackBlue
+  - first:
+      33: 3300010
+    second: 5 Z pos FrontGreen
+  - first:
+      33: 3300012
+    second: //RootNode
+  - first:
+      33: 3300014
+    second: 0 X neg LeftRed
+  - first:
+      33: 3300016
+    second: 1 X pos RightOrange
+  - first:
+      43: 4300000
+    second: Cublet
+  - first:
+      43: 4300002
+    second: 1 X pos LeftOrange
+  - first:
+      43: 4300004
+    second: 4 Z neg BackBlue
+  - first:
+      43: 4300006
+    second: 3 Y pos UpWhite
+  - first:
+      43: 4300008
+    second: 0 X neg RightRed
+  - first:
+      43: 4300010
+    second: 5 Z pos FrontGreen
+  - first:
+      43: 4300012
+    second: 2 Y neg DownYellow
+  - first:
+      43: 4300014
+    second: 1 X pos RightOrange
+  - first:
+      43: 4300016
+    second: 0 X neg LeftRed
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BackBlue
+    second: {fileID: 2100000, guid: 77f2738f2e4a4d04b9efe9e254d5686d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black
+    second: {fileID: 2100000, guid: a7f1bb1594c4ab143acfd206ea1089e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DownYellow
+    second: {fileID: 2100000, guid: 6163c3cae3fce6a45890d7271675a0c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FrontGreen
+    second: {fileID: 2100000, guid: f594a65aa46858c4da9c80d702cab145, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: LeftOrange
+    second: {fileID: 2100000, guid: cd58a5a1261424941a9524760bb55732, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RightRed
+    second: {fileID: 2100000, guid: 0634d2121c9c56149a58aed41d5eda7d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UpWhite
+    second: {fileID: 2100000, guid: c95e810c9b6c89348afae09db96f38ef, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 2
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

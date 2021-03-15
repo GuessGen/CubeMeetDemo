@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1270404475592930934
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1270404475592930928}
+  - component: {fileID: 1270404475592930929}
+  m_Layer: 0
+  m_Name: LevelInitializer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1270404475592930928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270404475592930934}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270404475592930929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270404475592930934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff37d40e76f91f34cb748c4b658693ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterCornerPrefab: {fileID: 6892221760574863877, guid: 25e860829cc3d9448bb6f9c335368ad8,
+    type: 3}
+  _characterEdgePrefab: {fileID: 8516229928142465999, guid: fdbc73fba66c2ad4d8cc8b3e8a17bade,
+    type: 3}
+  _collectableStarPrefab: {fileID: 3584813335040198479, guid: bf4644cb7fec5154ba3b313963dee582,
+    type: 3}
+  _bubbleSpeechPrefab: {fileID: 3170671922734749171, guid: 207e1e9120351604da16778d9763a047,
+    type: 3}
+  _rubikCubePrefab: {fileID: 7526513965415888479, guid: 5699540ba6f1b5442937444c30a136e2,
+    type: 3}
+  _cubletPrefab: {fileID: 851049134473544261, guid: 715496ce602429647a243205ba824ea4,
+    type: 3}
+  _starsToAddCount: 3
+  OnCubeChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4691923959835352518, guid: 7c9e92c1002da7f41a27c3cbf2903fd0,
+          type: 3}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: OnCubeChangedCeckCharactersDistance
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
